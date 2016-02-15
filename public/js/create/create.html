@@ -1,0 +1,150 @@
+<div class="dashboardNavBar">
+    <div class="nav5" ui-sref="Dashboard"><i class="fa fa-home"></i> DASHBOARD</div>
+    <div class="nav7" ui-sref="Map"><i class="fa fa-map-marker"></i> MAP</div>
+    <div class="dashboardNavLogo" ui-sref="Dashboard">
+      Temple Tracker  
+    </div>
+    <div class="nav7" ui-sref="Profile"><i class="fa fa-user"></i> PROFILE</div>
+    <div class="nav7"><a href="/auth/logout"><i class="fa fa-sign-out"></i> LOGOUT</a></div>
+</div>
+
+<div class="createContainer">
+  <form name="exampleForm" class="elegant-aero">
+  	<div>
+      <h5><sup style="color:red;">*</sup>Title</h5>
+        <input type="text" name="title" ng-model="visit.title" required>
+    </div>
+    <br>
+    <br>
+    <h5><sup style="color:red;">*</sup>Temple</h5>
+    <select class="browser-default" ng-model="visit.temple" required>
+      <option value="" disabled selected>Choose your temple</option>
+      <option ng-repeat="temple in temples" value="{{ temple._id }}"> {{ temple.name }} </option>
+    </select>
+    <br>
+    <br>
+  	<br>
+   	<h5><sup style="color:red;">*</sup>Date</h5><input type="date" ng-model="visit.date" required>
+    <br>
+    <br>
+    <br>
+
+
+      <p>
+        <input type="checkbox" id="test6" ng-model="visit.grounds"/>
+        <label for="test6">Only visited the Temple Grounds</label>
+      </p>		
+    <br>
+
+      <p>
+        <input type="checkbox" id="test4" ng-model="visit.openHouse"/>
+        <label for="test4">Walked through open house</label>
+      </p>	
+
+    <br>
+    <br>
+    <br>
+
+  	<div class="createOrdinances">
+  		<div class="row">
+  	      <div><h5>Document the ordinances you have done!</h5></div>
+          <br>
+          <br>
+  	      <div class="col s3">Baptisms
+  	      		<br>
+
+
+
+            <label>Number of Names:
+              <input type="number" name="input" ng-model="visit.baptisms" min="0" max="99" required>
+           </label>
+            <div role="alert">
+              <span class="error" ng-show="myForm.input.$error.required">
+                Required!</span>
+              <span class="error" ng-show="myForm.input.$error.number">
+                Not valid number!</span>
+            </div>
+
+
+  	      		<br>
+  	      </div>
+  	      <div class="col s3">Initiatories
+  	      	    <br>
+            <label>Number of Names:
+              <input type="number" name="input" ng-model="visit.initiatories" min="0" max="99" required>
+           </label>
+            <div role="alert">
+              <span class="error" ng-show="myForm.input.$error.required">
+                Required!</span>
+              <span class="error" ng-show="myForm.input.$error.number">
+                Not valid number!</span>
+            </div>
+  	      		<br>
+  	      </div>
+  	      <div class="col s3">Endowments
+  	      		<br>
+            <label>Number of Names:
+              <input type="number" name="input" ng-model="visit.endowments" min="0" max="99" required>
+           </label>
+            <div role="alert">
+              <span class="error" ng-show="myForm.input.$error.required">
+                Required!</span>
+              <span class="error" ng-show="myForm.input.$error.number">
+                Not valid number!</span>
+            </div>	
+  				<br>
+  	      </div>
+  	      <div class="col s3">Sealings
+  	      	    <br>
+            <label>Number of Names:
+              <input type="number" name="input" ng-model="visit.sealings" min="0" max="99" required>
+           </label>
+            <div role="alert">
+              <span class="error" ng-show="myForm.input.$error.required">
+                Required!</span>
+              <span class="error" ng-show="myForm.input.$error.number">
+                Not valid number!</span>
+            </div>
+  	      		<br>
+  	      </div>
+  	    </div>
+  	</div>
+  	<br>
+
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" ng-model="visit.visitJournal"></textarea>
+            <label for="textarea1">Journal</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  	<br>
+
+
+  	<h5>Upload Pictures Here</h5>
+    <div class="imageAdder" ng-repeat="image in visit.images track by $index">
+      <input type="text" placeholder="Paste Url here" ng-model="visit.images[$index]">
+      <button class="btn" ng-click="visit.images.splice($index, 1)">
+        <i class="fa fa-ban"></i>
+      </button>
+    </div>
+
+    <button id="addImageButton" class="btn" ng-click="visit.images.push('')">
+      Add Image
+    </button>
+
+  	<div class="submitVisitButton">
+      <a class="btn" onclick="Materialize.toast('Saved!', 4000)" ng-click="addVisit(visit)" ui-sref="Dashboard">
+        SUBMIT VISIT
+      </a>
+      <br>
+<br>
+<sup style="color:red;">*</sup> <i style="color:red;">Indicates required field.</i>
+<br>
+    </div>
+ </form>
+</div>

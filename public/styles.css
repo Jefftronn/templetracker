@@ -1,0 +1,562 @@
+* {
+	box-sizing: border-box;
+	font-family: "Roboto";
+}
+
+html, body { 
+	height: 100%; margin: 0; padding: 0; 
+}
+
+.fa {
+	color: #FFA500;
+}
+
+button {
+	border-radius: 10px;
+	color: white;
+}
+
+
+/*ABOUT PAGE START*/
+
+.headerBackground {
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/7f/Salt_Lake_LDS_Temple.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.navBar {
+	display: flex;
+	border-bottom: thin solid;
+	height: 70px;
+	color: white;
+	border-color: #DCDDDF;
+}
+
+.navLogo {
+	flex: 7;
+	padding-left: 30px;
+	font-size: 25px;
+	padding-top: 15px;
+}
+
+.nav1 {
+	flex: 1;	
+	font-size: 15px;
+	padding-top: 25px;
+	cursor: pointer;
+}
+
+#aboutNav {
+	color: white;
+}
+
+.nav2 {
+	flex: 1;	
+	font-size: 15px;
+	padding-top: 25px;
+	cursor: pointer;
+}
+
+.nav3 {
+	flex: 1;	
+	font-size: 15px;
+	padding-top: 25px;
+	cursor: pointer;
+}
+
+.nav4 {
+	flex: 1;	
+	font-size: 15px;	
+	padding-top: 25px;
+	cursor: pointer;
+}
+
+
+
+.headerText {
+	margin: 0 auto;
+	text-align: center;
+	width: 600px;
+	color: white;
+}
+
+.signUpButton {
+	text-align: center;
+}
+
+.middleContainer {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+#aboutContainer {
+	height: 570px;
+}
+
+.aboutIcon {
+	text-align: center;
+	padding-top: 25px;
+}
+
+#aboutTitle {
+	margin: 0 auto;
+	text-align: center;
+	width: 650px
+}
+
+.aboutText {
+	margin: 0 auto;
+	text-align: center;
+	width: 700px;
+}
+
+.aboutImage {
+	height: 300px;
+	width: 600px;
+	background-image: url(http://i.imgur.com/tYcDSQv.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.featuresContainer { 
+	background-color: #DCDDDF;
+}
+
+.featuresIcon {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.featuresTitles {
+	text-align: center;
+}
+
+.col {
+	text-align: center;
+}
+
+.footerContainer {
+	height: 300px;
+}
+
+.footerContainer div {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.footerQuote {
+	margin: 0 auto;
+	text-align: center;
+	width: 700px;
+	padding-top: 30px;
+}
+
+.quoteAuthor {
+	padding-top: 5px;
+	padding-bottom: 30px;
+}
+/*ABOUT PAGE END*/
+
+/*LOGIN START PAGE*/
+.loginBackground {
+	background-image: url(http://www.ldschurchtemples.com/provocitycenter/gallery/images/provo-city-center-mormon-temple1.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.loginInput {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	text-align: center;
+  	z-index: 100;
+}
+
+.overlayInput {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+  	text-align: center;
+  	background-color: white;
+  	z-index: 10;
+  	opacity: .9;
+  	border-radius: 10px;
+  	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+/*LOGIN END PAGE*/
+
+/*REGISTER PAGE START*/
+
+.registerBackground {
+	background-image: url(http://www.ldschurchtemples.com/oakland/gallery/images/oakland-mormon-temple39.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.overlayRegister {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+  	text-align: center;
+  	background-color: white;
+  	z-index: 10;
+  	opacity: .9;
+  	border-radius: 10px;
+  	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+/*REGISTER PAGE START*/
+
+/*CONTACT PAGE START*/
+
+.contactBackground {
+	background-image: url(http://www.ldschurchtemples.com/manti/gallery/images/manti-mormon-temple4.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*CONTACT PAGE END*/
+
+
+/*DASHBOARD PAGE START*/
+
+.dashboardNavBar {
+	display: flex;
+	border-bottom: thin solid;
+	height: 70px;
+	border-color: #DCDDDF;
+	text-align: center;
+}
+
+.dashboardNavLogo {
+	flex: 7;
+	padding-right: 30px;
+	font-size: 25px;
+	padding-top: 15px;
+	text-align: right;
+}
+
+.nav5 {
+	flex: 2;	
+	font-size: 15px;
+	padding-top: 25px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.nav6 {
+	flex: 2;	
+	font-size: 15px;
+	padding-top: 25px;
+	cursor: pointer;
+}
+
+.nav7 {
+	flex: 2;	
+	font-size: 15px;
+	padding-top: 25px;
+	cursor: pointer;
+}
+
+.nav7 a {
+	color: black;
+}
+
+.dashboardContainer {
+	position: relative;
+}
+
+.profileBox {
+	width: 250px;
+	height: 250px;
+	border: 1px solid #DCDDDF;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+.profilePic {
+	margin: 0 auto;
+}
+
+.profileInfo {
+	width: 250px;
+	height: 300px;
+	border: 1px solid #DCDDDF;
+	margin-left: 30px;
+	border-radius: 10px;
+	padding: 12px 20px 20px 20px;
+	text-align: center;
+	background-color: #DCDDDF;
+	margin-top: 30px;
+}
+
+.visits {
+	width: 600px;
+	height: 300px;
+	text-align: center;
+	display: block;
+	margin-bottom: 100px;
+	margin-top: 10px;
+}
+
+.visitContainer {
+	position: absolute;
+	margin: 0 auto;
+	text-align: center;
+	left: 50vh;
+	top: 0px;
+}
+
+.visits img {
+	width: 500px;
+	height: 200px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.addVisit {
+	position: absolute;
+	top: 30px;
+	right: 45px;
+	text-align: center;
+}
+
+/*DASHBOARD PAGE END*/
+
+/*PROFILE PAGE START*/
+
+.profileContainer {
+	text-align: center;
+	background-color: #DCDDDF;
+	padding-bottom: 50px;
+}
+
+.profileTitle {
+	font-size: 40px;
+	margin-bottom: 40px;
+}
+
+.profileBox {
+	border-radius: 10px;
+	margin-top: 40px;
+}
+
+.profileBox2 img {
+	border-radius: 10px;
+	margin-top: 50px;
+}
+
+.row {
+	background-color: white;
+	padding-bottom: 30px;
+	margin-bottom: 60px;
+}
+
+
+.profileJournalDisplay {
+	margin: 0 auto;
+	width: 600px;
+	background-color: white;
+	padding-right: 40px;
+	padding-left: 40px;
+	padding-top: 20px;
+	margin-top: 50px;
+}
+
+#ordinances {
+	font-size: 28px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#journalTitle {
+	color: #FFA500;
+	font-size: 30px;
+}
+
+.title {
+	color: #FFA500;
+}
+
+#editJournalButton {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/*PROFILE PAGE END*/
+
+/*CREATE PAGE START*/
+
+.createContainer {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.submitVisitButton {
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+#addImageButton {
+	margin-bottom: 40px;
+	margin-top: 60px;
+}
+
+.btn i {
+	color: white;
+}
+
+
+
+
+/*CREATE PAGE END*/
+
+
+/*SINGLE VISIT PAGE START*/
+
+.singleVisitContainer {
+	background-color: #DCDDDF;
+	position: relative;
+	text-align: center;
+}
+
+.mainBlog {
+	background-color: white;
+	width: 700px;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+
+.singleVisitTitle {
+	font-size: 40px;
+	font-style: bold;
+	text-align: center;
+	color: #FFA500;
+	border-bottom: black;
+	border: 1px;
+}
+
+.singleVisitDate {
+	text-align: right;
+	float: right;
+	width: 130px;
+	padding-right: 10px;
+	background-color: #EEE8A9;
+	box-shadow: 5px 5px 3px #888888;
+}
+
+.visitJournalEntry {
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+}
+
+.blogInfo {
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	width: 250px;
+	border: 1px solid #DCDDDF;
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px 20px 20px 20px;
+}
+
+.singleVisitGallery {
+	margin: 0 auto;
+	padding-bottom: 50px;
+	font-size: 25px;
+	color: #FFA500;
+}
+
+.singleVisitGallery img {
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+}
+
+.editVisit {
+	position: absolute;
+	top: 100px;
+	right: 50px;
+	text-align: center;
+}
+
+
+/*SINGLE VISIT PAGE END*/
+
+/*MAP PAGE START*/
+#map { 
+	height: 100vh; 
+	width: 100%;
+}
+
+.controls {
+	margin-top: 10px;
+	border: 1px solid transparent;
+	border-radius: 2px 0 0 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 32px;
+	outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+	background-color: #fff;
+	font-family: Roboto;
+	font-size: 15px;
+	font-weight: 300;
+	margin-left: 12px;
+	padding: 0 11px 0 13px;
+	text-overflow: ellipsis;
+	width: 300px;
+}
+
+#pac-input:focus {
+	border-color: #4d90fe;
+}
+
+.pac-container {
+	font-family: Roboto;
+}
+
+#type-selector {
+	color: #fff;
+	background-color: #4d90fe;
+	padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+	font-family: Roboto;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+
+.angular-google-map-container {
+	width: 600px;
+	height: 600px;
+
+}
+
+/*MAP PAGE END*/

@@ -1,0 +1,159 @@
+<div class="dashboardNavBar">
+    <div class="nav5" ui-sref="Dashboard"><i class="fa fa-home"></i> DASHBOARD</div>
+    <div class="nav7" ui-sref="Map"><i class="fa fa-map-marker"></i> MAP</div>
+    <div class="nav7" ui-sref="Create"><i class="fa fa-plus-circle"></i> ADD VISIT</div>
+    <div class="dashboardNavLogo" ui-sref="Dashboard">
+      Temple Tracker  
+    </div>
+    <div class="nav7" ui-sref="Profile"><i class="fa fa-user"></i> PROFILE</div>
+    <div class="nav7"><a href="/auth/logout"><i class="fa fa-sign-out"></i> LOGOUT</a></div>
+</div>
+
+<div class="profileContainer">
+	<div class="profileBox2">
+    <img ng-src="{{ user.userProfileImage }}">
+    <div class="profileTitle">{{ user.name }} </div>
+	</div>	
+
+    <div class="row">
+      <div id="ordinances">Personal Ordinances</div>
+      <div class="col s3">
+          <div class="title">Baptism</div>
+      		<div>Date: {{ user.baptism | date : fullDate}}</div>
+      		<br>
+      	    <a class="waves-effect waves-light btn" ng-click="openModalBaptism(user)">EDIT</a>
+      </div>
+      <div class="col s3">
+          <div class="title">Initiatory</div>
+      	    
+      		Date: {{ user.initiatory.date | date : fullDate }}
+      		<br>
+      		Temple: {{ user.initiatory.temple.name }}
+      		<br>
+      	    <a class="waves-effect waves-light btn" ng-click="openModalInitiatory(user)">EDIT</a>
+      </div>
+      <div class="col s3">
+          <div class="title">Endowment</div>
+      		Date: {{ user.endowment.date | date : fullDate }}
+			<br>
+      		Temple: {{ user.endowment.temple.name }}   	
+      		<br>
+      	    <a class="waves-effect waves-light btn" ng-click="openModalEndowment(user)">EDIT</a>
+      </div>
+      <div class="col s3">
+          <div class="title">Sealing</div>
+      		Date: {{ user.sealing.date | date : fullDate }}
+      		<br>
+      		Temple: {{ user.sealing.temple.name }}     
+      		<br>
+      	    <a class="waves-effect waves-light btn" ng-click="openModalSealing(user)">EDIT</a>
+      </div>
+    </div>
+
+    <div class="profileJournalDisplay">
+      <div id="journalTitle">Journal</div>
+      <div style="white-space:pre-wrap;">{{ user.profileJournal }}</div>
+
+    	<a  id="editJournalButton"class="waves-effect waves-light btn" ng-click="openModalProfileJournal(user)">EDIT</a>
+    </div>
+
+<!-- Edit user baptism button -->
+<div id="modalBaptism" class="modal">
+  <div class="modal-content">
+      <h3>Edit Ordinances</h3>
+      <br>
+      Edit Date
+      <input type="date" ng-model="user.baptism">
+      <br/>
+      <br/>
+      <div class="modal-footer">
+        <button class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="editUser(modal)">SAVE
+        </button>
+      </div>
+  </div>
+</div>
+
+<div id="modalInitiatory" class="modal">
+  <div class="modal-content">
+      <h3>Edit Ordinances</h3>
+      <br>
+      Edit Date
+      <input type="date" ng-model="user.initiatory.date">
+      <br/>
+      Edit Temple
+      <br>
+      <br>
+      <select class = "browser-default" ng-options="temple.name for temple in temples" ng-model="user.initiatory.temple"></select>
+      <br/>
+      <div class="modal-footer">
+        <button class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="editUser(modal)">SAVE
+        </button>
+      </div>
+  </div>
+</div>
+
+<div id="modalEndowment" class="modal">
+  <div class="modal-content">
+      <h3>Edit Ordinances</h3>
+      <br>
+      Edit Date
+      <input type="date" ng-model="user.endowment.date">
+      <br/>
+      Edit Temple
+      <br>
+      <br>
+      <select class = "browser-default" ng-options="temple.name for temple in temples" ng-model="user.endowment.temple"></select>
+      <br/>
+      <div class="modal-footer">
+        <button class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="editUser(modal)">SAVE
+        </button>
+      </div>
+  </div>
+</div>
+
+<div id="modalSealing" class="modal">
+  <div class="modal-content">
+      <h3>Edit Ordinances</h3>
+      <br>
+      Edit Date
+      <input type="date" ng-model="user.sealing.date">
+      <br/>
+      Edit Temple
+      <br>
+      <br>
+      
+      <select class = "browser-default" ng-options="temple.name for temple in temples" ng-model="user.sealing.temple"></select>
+      <br/>
+      <div class="modal-footer">
+        <button class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="editUser(modal)">SAVE
+        </button>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- Edit user profileJournal button -->
+<div id="modalProfileJournal" class="modal">
+  <div class="modal-content">
+    <h3>Edit Journal for Your Ordinances</h3>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" ng-model="user.profileJournal"></textarea>
+            <label for="textarea1">Journal</label>
+          </div>
+        </div>
+      </form>
+  </div>
+      <br/>
+      <br/>
+      <div class="modal-footer">
+        <button class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="editUser(modal)">SAVE
+        </button>
+      </div>
+  </div>
+</div>
+
+

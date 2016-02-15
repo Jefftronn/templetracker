@@ -1,0 +1,58 @@
+<div class="dashboardNavBar">
+    <div class="nav5" ui-sref="Dashboard"><i class="fa fa-home"></i> DASHBOARD</div>
+    <div class="nav7" ui-sref="Map"><i class="fa fa-map-marker"></i> MAP</div>
+    <div class="nav7" ui-sref="Create"><i class="fa fa-plus-circle"></i> ADD VISIT</div>
+    <div class="dashboardNavLogo" ui-sref="Dashboard">
+      Temple Tracker  
+    </div>
+    <div class="nav7" ui-sref="Profile"><i class="fa fa-user"></i> PROFILE</div>
+    <div class="nav7"><a href="/auth/logout"><i class="fa fa-sign-out"></i> LOGOUT</a></div>
+</div>
+
+
+<div class="dashboardContainer">
+
+	<div class="profileInfo">
+		<i class="fa fa-server"></i> Profile Info:
+		<br>
+		<br>
+		Baptism: {{ user.baptism | date : fullDate}}
+		<br>
+		<br>
+
+		Initiatory: {{ user.initiatory.date | date : fullDate}}
+		<br>
+		{{ user.initiatory.temple.name }}
+		<br>
+		<br>
+
+		Endowment: {{ user.endowment.date | date : fullDate}}
+		<br>
+		{{ user.endowment.temple.name }}
+		<br>
+		<br>
+
+		Sealing: {{ user.sealing.date | date : fullDate}}
+		<br>
+		{{ user.sealing.temple.name }}
+		<br>
+	</div>
+
+	<div class="visitContainer">
+		<div class="visits" ng-repeat="visit in visits">
+
+			<h5>{{ visit.title }}</h5>
+			<p>{{ visit.date | date : fullDate }}</p>
+			<p>{{ visit.temple.name }}</p>
+			<img ng-src="{{ visit.temple.defaultPic }}"></a>
+
+			<!-- VISIT #1 -->
+			<a class="waves-effect waves-light btn" ui-sref="Visit({ id:visit._id })">View</a>
+		<a class="waves-effect waves-light btn" ng-click="tryDelete(visit._id)">Delete</a>
+	  
+		</div>
+	</div>
+
+	<div class="addVisit"><a class="btn-floating btn-large waves-effect waves-light teal lighten-1" ui-sref="Create"><i class="material-icons">add</i></a><br><h4>Add a visit</h4></div>
+
+</div>
